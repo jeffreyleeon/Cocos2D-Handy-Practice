@@ -7,12 +7,19 @@
 //
 
 #import "Background.h"
+//#import "CCDirector.h"
 
 @implementation Background
 
 - (void) play {
-    CCLOG(@"Back");
+    CCLOG(@"Back from back");
 }
 
+
+- (void) menu {
+    CCLOG(@"MENU");
+    CCScene* menu = [CCBReader loadAsScene: @"Menu"];
+    [[CCDirector sharedDirector] pushScene: menu];
+}
 
 @end
